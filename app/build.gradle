@@ -2,10 +2,12 @@ plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
     id 'org.jlleitschuh.gradle.ktlint'
+    id 'kotlin-kapt'
+    id 'androidx.navigation.safeargs.kotlin'
 }
 
 android {
-    namespace 'com.ndt.marvelapp'
+    namespace(AppConfig.namespace)
     compileSdk(AndroidSdk.compile)
 
     defaultConfig {
@@ -48,4 +50,30 @@ dependencies {
     androidTestImplementation TestLibraries.junitExt
     androidTestImplementation TestLibraries.junitExt
 
+    //navigation
+    implementation Libraries.lifecycleExtensions
+    implementation Libraries.navigationFragment
+    implementation Libraries.navigationUI
+    implementation Libraries.navigationDynamic
+
+    //roomdb
+    implementation Libraries.roomRuntime
+    implementation Libraries.roomKtx
+    kapt Libraries.roomCompiler
+
+    //load image
+    implementation Libraries.imageGlide
+
+    //koin
+    implementation Libraries.koinCore
+    implementation Libraries.koinAndroid
+    implementation Libraries.lifecycleViewmodel
+
+    //retrofit
+    implementation Libraries.retrofit
+    implementation Libraries.converterGson
+
+    //coroutines
+    implementation Libraries.coroutinesCore
+    implementation Libraries.coroutinesAndroid
 }
