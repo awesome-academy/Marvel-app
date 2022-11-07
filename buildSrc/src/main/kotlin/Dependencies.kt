@@ -12,10 +12,48 @@ object Version {
 }
 
 object Libraries {
-    const val appCompat = "androidx.appcompat:appcompat:1.5.1"
-    const val ktxCore = "androidx.core:core-ktx:1.7.0"
-    const val androidMaterial = "com.google.android.material:material:1.7.0"
-    const val constraintLayout = "androidx.constraintlayout:constraintlayout:2.1.4"
+    private object Versions {
+        const val appCompat = "1.5.1"
+        const val ktx = "1.5.1"
+        const val constraintLayout = "2.1.4"
+        const val masterial = "1.7.0"
+        const val coroutinesCore = "1.6.4"
+        const val coroutinesAndroid = "1.6.4"
+    }
+
+    const val appCompat = "androidx.appcompat:appcompat:${Versions.appCompat}"
+    const val ktxCore = "androidx.core:core-ktx:${Versions.ktx}"
+    const val androidMaterial = "com.google.android.material:material:${Versions.masterial}"
+    const val constraintLayout =
+        "androidx.constraintlayout:constraintlayout:${Versions.constraintLayout}"
+
+    //coroutines
+    const val coroutinesCore = "org.jetbrains.kotlinx:kotlinx-coroutines-core:${Versions.coroutinesCore}"
+    const val coroutinesAndroid = "org.jetbrains.kotlinx:kotlinx-coroutines-android:${Versions.coroutinesAndroid}"
+
+    //nav
+    const val lifecycleExtensions = "androidx.lifecycle:lifecycle-extensions:2.2.0"
+    const val navigationFragment = "androidx.navigation:navigation-fragment-ktx:2.5.3"
+    const val navigationUI = "androidx.navigation:navigation-ui-ktx:2.5.3"
+    const val navigationDynamic = "androidx.navigation:navigation-dynamic-features-fragment:2.5.3"
+
+    //roomdb
+    const val roomRuntime = "androidx.room:room-runtime:2.5.0-beta01"
+    const val roomKtx = "androidx.room:room-ktx:2.5.0-beta01"
+    const val roomCompiler = "androidx.room:room-compiler:2.5.0-beta01"
+
+    //load image
+    const val imageGlide = "com.github.bumptech.glide:glide:4.13.2"
+
+    //koin
+    const val koinCore = "io.insert-koin:koin-core:3.2.0"
+    const val koinAndroid = "io.insert-koin:koin-android:3.2.0"
+    const val lifecycleViewmodel = "androidx.lifecycle:lifecycle-viewmodel-ktx:2.5.1"
+
+    //retrofit
+    const val retrofit = "com.squareup.retrofit2:retrofit:2.9.0"
+    const val converterGson = "com.squareup.retrofit2:converter-gson:2.9.0"
+    const val loggingInterceptor = "com.squareup.okhttp3:logging-interceptor:3.9.0"
 }
 
 object TestLibraries {
@@ -25,6 +63,7 @@ object TestLibraries {
 }
 
 object AppConfig {
+    const val namespace = "com.ndt.marvelapp"
     const val applicationId = "com.ndt.marvelapp"
     const val versionCode = 1
     const val versionName = "1.0"
