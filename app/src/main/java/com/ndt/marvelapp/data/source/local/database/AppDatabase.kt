@@ -19,6 +19,5 @@ abstract class AppDatabase : RoomDatabase() {
         const val DATABASE_VERSION = 1
         const val DATABASE_NAME = "comicFavorite"
         const val EXPORT_SCHEME = false
-        const val FAVORITE_TABLE = "favorite"
     }
 }
