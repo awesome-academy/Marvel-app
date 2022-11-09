@@ -11,7 +11,7 @@ import com.ndt.marvelapp.data.source.local.database.AppDatabase
 
 @Dao
 interface ComicDao {
-    @Query("SELECT * FROM ${AppDatabase.FAVORITE_TABLE}")
+    @Query("SELECT * FROM comic")
     suspend fun getFavorites(): List<Comic>
 
     @Insert(onConflict = OnConflictStrategy.IGNORE)
@@ -19,5 +19,5 @@ interface ComicDao {
 
     @Delete
     suspend fun deleteFavorite(comic: Comic)
-
+    
 }

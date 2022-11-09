@@ -9,4 +9,3 @@ abstract class BaseViewHolder<T, VB : ViewBinding>(
 
     abstract fun onBindData(data: T)
 }
-

@@ -24,4 +24,5 @@ val dbModule = module {
 val repoComicModule = module {
     single<ComicDataSource.Local> { ComicLocalDataSource(get()) }
     single<ComicRepository> { ComicRepositoryImpl(get()) }
+
 }

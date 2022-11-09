@@ -18,6 +18,9 @@ android {
         versionName(AppConfig.versionName)
 
         testInstrumentationRunner AppConfig.testInstrumentationRunner
+        buildConfigField "String", "API_KEY", "\"${API_KEY}\""
+        buildConfigField "String", "HASH", "\"${HASH}\""
+        buildConfigField "String", "TS", "\"${TS}\""
     }
 
     buildTypes {
@@ -72,6 +75,7 @@ dependencies {
     //retrofit
     implementation Libraries.retrofit
     implementation Libraries.converterGson
+    implementation Libraries.loggingInterceptor
 
     //coroutines
     implementation Libraries.coroutinesCore
