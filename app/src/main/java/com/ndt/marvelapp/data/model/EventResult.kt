@@ -2,7 +2,7 @@ package com.ndt.marvelapp.data.model
 
 import com.google.gson.annotations.SerializedName
 
-class ComicResponse(
-    @SerializedName("data")
-    val data: ComicResult?
+class EventResult(
+    @SerializedName("results")
+    var results: List<Event>? = null
 )
