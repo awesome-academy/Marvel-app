@@ -7,14 +7,31 @@
     <fragment
         android:id="@+id/navigation_home"
         android:name="com.ndt.marvelapp.ui.home.HomeFragment"
-        android:label="HomeFragment" />
+        android:label="HomeFragment">
+        <action
+            android:id="@+id/action_home_fragment_to_see_more_fragment"
+            app:destination="@+id/see_more_fragment" />
+        <action
+            android:id="@+id/action_home_fragment_to_list_comic_fragment"
+            app:destination="@+id/list_comic_fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/see_more_fragment"
+        android:name="com.ndt.marvelapp.ui.seemore.SeeMoreFragment"
+        android:label="SeeMoreFragment">
+    </fragment>
+    <fragment
+        android:id="@+id/listComicFragment"
+        android:name="com.ndt.marvelapp.ui.listcomic.ListComicFragment"
+        android:label="ListComicFragment">
+    </fragment>
     <fragment
         android:id="@+id/navigation_comic"
         android:name="com.ndt.marvelapp.ui.comic.ComicFragment"
         android:label="ComicFragment" />
     <fragment
         android:id="@+id/navigation_favorite"
-        android:name="com.ndt.marvelapp.ui.FavoriteFragment"
+        android:name="com.ndt.marvelapp.ui.favorite.FavoriteFragment"
         android:label="FavoriteFragment" />
     <fragment
         android:id="@+id/navigation_setting"

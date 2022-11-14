@@ -8,9 +8,9 @@ import androidx.room.PrimaryKey
 data class Comic(
     @PrimaryKey
     @ColumnInfo(name = "id")
-    val id: Int,
+    val id: Int?,
     @ColumnInfo(name = "title")
-    val title: String,
+    val title: String?,
     @ColumnInfo(name = "description")
-    val description: String
+    val description: String?
 )

@@ -5,11 +5,11 @@ import com.google.gson.annotations.SerializedName
 
 data class Character(
     @SerializedName("id")
-    val id: Int,
+    val id: Int?,
     @SerializedName("name")
-    val name: String,
+    val name: String?,
     @SerializedName("description")
-    val description: String,
+    val description: String?,
     @SerializedName("thumbnail")
-    val thumbnail: Image
+    val thumbnail: String?
 )

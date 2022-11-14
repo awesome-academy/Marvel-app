@@ -1,10 +1,11 @@
 package com.ndt.marvelapp
 
 import android.app.Application
-import com.ndt.marvelapp.di.apiModule
 import com.ndt.marvelapp.di.dbModule
 import com.ndt.marvelapp.di.networkModule
 import com.ndt.marvelapp.di.repoComicModule
+import com.ndt.marvelapp.di.viewModelModule
+import com.ndt.marvelapp.di.apiModule
 import org.koin.android.ext.koin.androidContext
 import org.koin.core.context.GlobalContext.startKoin
 
@@ -18,6 +19,7 @@ class MyApplication : Application() {
                     dbModule,
                     repoComicModule,
                     networkModule,
+                    viewModelModule,
                     apiModule
                 )
             )
