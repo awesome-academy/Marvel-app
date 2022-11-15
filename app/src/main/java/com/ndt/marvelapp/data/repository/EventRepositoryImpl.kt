@@ -9,7 +9,7 @@ class EventRepositoryImpl(
     private val remote: EventDataSource
 ) : EventRepository, BaseRepository() {
 
-    override suspend fun getEvents() = getResult {
-        remote.getEvents()
+    override suspend fun getEvents(): DataResult<List<Event>> = getResult {
+        remote.getEvents().data?.results!!
     }
 }

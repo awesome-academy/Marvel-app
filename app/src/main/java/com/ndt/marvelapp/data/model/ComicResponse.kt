@@ -4,5 +4,5 @@ import com.google.gson.annotations.SerializedName
 
 class ComicResponse(
     @SerializedName("data")
-    val data: ComicResult?
+    val data: ComicResult? = null
 )

@@ -10,7 +10,7 @@
         android:layout_width="@dimen/dp_0"
         android:layout_height="@dimen/dp_0"
         app:cardCornerRadius="@dimen/dp_8"
-        app:layout_constraintDimensionRatio="3:1.75"
+        app:layout_constraintDimensionRatio="2.3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">

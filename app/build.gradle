@@ -83,4 +83,7 @@ dependencies {
     //coroutines
     implementation Libraries.coroutinesCore
     implementation Libraries.coroutinesAndroid
+
+    //scrollingPagerIndicator
+    implementation Libraries.scrollingPagerIndicator
 }

@@ -7,6 +7,7 @@ import com.ndt.marvelapp.base.BaseViewModel
 import com.ndt.marvelapp.data.model.Creator
 import com.ndt.marvelapp.data.model.Event
 import com.ndt.marvelapp.databinding.FragmentHomeBinding
+import com.ndt.marvelapp.ui.adapter.CreatorAdapter
 import com.ndt.marvelapp.ui.adapter.EventAdapter
 import com.ndt.marvelapp.utils.BUNDLE.BUNDLE_CHARACTER
 import com.ndt.marvelapp.utils.BUNDLE.BUNDLE_CREATOR
@@ -19,6 +20,9 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(FragmentHomeBinding::infl
     View.OnClickListener {
 
     private val eventAdapter = EventAdapter(::clickItemEvent)
+    private val creatorAdapter = CreatorAdapter(::clickItemCreator)
+
+
     override val viewModel by viewModel<HomeViewModel>()
 
     override fun initActions() {
@@ -27,6 +31,7 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(FragmentHomeBinding::infl
 
     override fun initData() {
         binding.recyclerEvent.adapter = eventAdapter
+        binding.recyclerCreator.adapter = creatorAdapter
     }
 
     override fun onClick(view: View?) {
@@ -36,7 +41,6 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(FragmentHomeBinding::infl
             binding.imageButtonCharacter -> directFragment(BUNDLE_CHARACTER)
             binding.imageButtonStories -> directFragment(BUNDLE_STORY)
             binding.imageButtonSeries -> directFragment(BUNDLE_SERIES)
-
         }
     }
 
@@ -48,6 +52,12 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(FragmentHomeBinding::infl
     private fun clickItemEvent(event: Event) {
         val action =
             HomeFragmentDirections.actionHomeFragmentToListComicFragment(event.id, BUNDLE_EVENT)
+        findNavController().navigate(action)
+    }
+
+    private fun clickItemCreator(creator: Creator) {
+        val action =
+            HomeFragmentDirections.actionHomeFragmentToListComicFragment(creator.id, BUNDLE_CREATOR)
         findNavController().navigate(action)
     }
 }

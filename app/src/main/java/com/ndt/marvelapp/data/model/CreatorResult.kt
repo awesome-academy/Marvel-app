@@ -2,7 +2,7 @@ package com.ndt.marvelapp.data.model
 
 import com.google.gson.annotations.SerializedName
 
-class EventResult(
+class CreatorResult(
     @SerializedName("results")
-    var results: List<Event>?
+    val results: List<Creator>
 )
