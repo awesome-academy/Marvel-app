@@ -22,9 +22,11 @@ data class Event(
     companion object {
 
         val diffUtil = object : DiffUtil.ItemCallback<Event>() {
-            override fun areItemsTheSame(oldItem: Event, newItem: Event) = oldItem.id == newItem.id
+            override fun areItemsTheSame(oldItem: Event, newItem: Event) =
+                oldItem.id == newItem.id
 
-            override fun areContentsTheSame(oldItem: Event, newItem: Event) = oldItem == newItem
+            override fun areContentsTheSame(oldItem: Event, newItem: Event) =
+                oldItem == newItem
         }
     }
 }

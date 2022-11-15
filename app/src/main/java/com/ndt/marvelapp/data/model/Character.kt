@@ -1,6 +1,5 @@
 package com.ndt.marvelapp.data.model
 
-import android.media.Image
 import com.google.gson.annotations.SerializedName
 
 data class Character(

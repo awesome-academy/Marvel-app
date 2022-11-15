@@ -54,6 +54,9 @@ object Libraries {
     const val retrofit = "com.squareup.retrofit2:retrofit:2.9.0"
     const val converterGson = "com.squareup.retrofit2:converter-gson:2.9.0"
     const val loggingInterceptor = "com.squareup.okhttp3:logging-interceptor:3.9.0"
+
+    //scrollingPagerIndicator
+    const val scrollingPagerIndicator = "ru.tinkoff.scrollingpagerindicator:scrollingpagerindicator:1.2.1"
 }
 
 object TestLibraries {

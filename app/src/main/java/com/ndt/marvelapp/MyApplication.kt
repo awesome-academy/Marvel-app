@@ -6,6 +6,8 @@ import com.ndt.marvelapp.di.networkModule
 import com.ndt.marvelapp.di.repoComicModule
 import com.ndt.marvelapp.di.viewModelModule
 import com.ndt.marvelapp.di.apiModule
+import com.ndt.marvelapp.di.repoCreatorModule
+import com.ndt.marvelapp.di.repoEventModule
 import org.koin.android.ext.koin.androidContext
 import org.koin.core.context.GlobalContext.startKoin
 
@@ -20,7 +22,9 @@ class MyApplication : Application() {
                     repoComicModule,
                     networkModule,
                     viewModelModule,
-                    apiModule
+                    apiModule,
+                    repoCreatorModule,
+                    repoEventModule,
                 )
             )
         }
