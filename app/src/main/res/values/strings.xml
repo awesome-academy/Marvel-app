@@ -10,4 +10,10 @@
     <string name="event">Event</string>
     <string name="creator">Creator</string>
     <string name="search">Search</string>
+    <string name="text_search">Search</string>
+    <string name="text_choose_year">Choose year</string>
+    <string name="text_set">Set</string>
+    <string name="text_cancel">Cancel</string>
+    <string name="hint_search">hint search</string>
+    <string name="text_modified">text modified</string>
 </resources>

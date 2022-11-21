@@ -5,7 +5,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.Observer
 import androidx.viewbinding.ViewBinding
 import com.ndt.marvelapp.utils.showToast
 
@@ -32,9 +31,12 @@ abstract class BaseFragment<T : ViewBinding>(private val inflate: Inflate<T>) : 
         viewModel.error.observe(viewLifecycleOwner) {
             view.context.showToast(it)
         }
+        setupViews()
         initData()
         initActions()
     }
+
+    abstract fun setupViews()
 
     abstract fun initActions()
 
