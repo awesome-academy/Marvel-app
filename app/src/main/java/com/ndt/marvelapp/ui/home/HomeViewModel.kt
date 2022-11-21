@@ -8,9 +8,8 @@ import com.ndt.marvelapp.data.model.Creator
 import com.ndt.marvelapp.data.model.Event
 import com.ndt.marvelapp.data.repository.CreatorRepository
 import com.ndt.marvelapp.data.repository.EventRepository
-
-const val COUNT_EVENT = 4
-const val COUNT_CREATOR = 7
+import com.ndt.marvelapp.utils.AppContanst.COUNT_CREATOR
+import com.ndt.marvelapp.utils.AppContanst.COUNT_EVENT
 
 class HomeViewModel(
     private val eventRepository: EventRepository,

@@ -9,6 +9,9 @@ object AppContanst {
     const val IMAGE_NOT_AVAILABLE =
         "http://i.annihil.us/u/prod/marvel/i/mg/b/40/image_not_available"
     const val FORMAT_COMIC = "comic"
+    const val COUNT_EVENT = 4
+    const val COUNT_CREATOR = 7
+    const val MIN_YEAR = 1954
 }
 
 object BUNDLE {

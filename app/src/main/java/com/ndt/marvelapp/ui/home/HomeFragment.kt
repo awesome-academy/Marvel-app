@@ -3,7 +3,6 @@ package com.ndt.marvelapp.ui.home
 import android.view.View
 import androidx.navigation.fragment.findNavController
 import com.ndt.marvelapp.base.BaseFragment
-import com.ndt.marvelapp.base.BaseViewModel
 import com.ndt.marvelapp.data.model.Creator
 import com.ndt.marvelapp.data.model.Event
 import com.ndt.marvelapp.databinding.FragmentHomeBinding
@@ -60,4 +59,9 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(FragmentHomeBinding::infl
             HomeFragmentDirections.actionHomeFragmentToListComicFragment(creator.id, BUNDLE_CREATOR)
         findNavController().navigate(action)
     }
+
+    override fun setupViews() {
+        TODO("Not yet implemented")
+    }
 }
+

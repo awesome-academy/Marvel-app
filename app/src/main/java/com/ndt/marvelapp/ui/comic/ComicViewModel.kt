@@ -7,18 +7,35 @@ import com.ndt.marvelapp.data.model.Comic
 import com.ndt.marvelapp.data.repository.ComicRepository
 
 class ComicViewModel(private val comicRepository: ComicRepository) : BaseViewModel() {
+
     private val _comic = MutableLiveData<List<Comic>>()
+    private val _error = MutableLiveData<String>()
+
     val comic: LiveData<List<Comic>>
         get() = _comic
-    private val _isEmpty = MutableLiveData<Boolean>()
-    val isEmpty: LiveData<Boolean>
-        get() = _isEmpty
 
     init {
         getComics()
     }
 
     private fun getComics() {
-        comicRepository
+        launchAsync(request = {
+            comicRepository.getComics()
+        }, onSuccess = {
+            _comic.value = it
+        }, {
+            _error.value = it.message.toString()
+        })
+    }
+
+    fun getComicByYear(format: String, year: Int) {
+        launchAsync(
+            request = {
+                comicRepository.getComicByYear(format, year)
+            }, onSuccess = {
+                _comic.value = it
+            }, {
+                _error.value = it.message.toString()
+            })
     }
 }
